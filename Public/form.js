@@ -57,8 +57,26 @@ document.getElementById('delivery-form').addEventListener('submit', async functi
             throw new Error('Failed to save address: ' + response.statusText);
         }
 
-        const result = await response.json();
-        console.log('Success:', result);
+        const o = await order.json();
+
+        //save order
+        const payment_link = await fetch(`http://localhost:5454/api/payment/${o.id}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to save address: ' + response.statusText);
+        }
+
+        const p = await payment_link.json();
+        console.log(p);
+
+        window.location.href = `${p.payment_link_url}`;
+        
+        
     } catch (error) {
     }
 });
