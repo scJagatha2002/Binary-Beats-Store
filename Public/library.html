@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../store.css">
+
+    <!-- Page Title -->
+    <title>Library - Binary Beats</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../Images/Binary_Beats_logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts - Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Internal Styles -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #343a40;
+            color: #ffffff;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+
+        .main-logo {
+            max-height: 40px;
+            margin-right: 10px;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .hero-section {
+            position: relative;
+            background: linear-gradient(rgba(1, 66, 122, 0.7), rgba(1, 179, 239, 0.7)), url('../Images/library.jpg') no-repeat center center/cover;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 100px 0;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-section .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .popular-books {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .card {
+            border: none;
+            background-color: #343a40;
+            color: #ffffff;
+            height: 100%;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-img-top {
+            max-height: 200px; /* Adjust image height as needed */
+            object-fit: cover;
+        }
+
+        .btn-primary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+
+        .btn-primary:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .footer-logo {
+            max-height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .link-body-emphasis {
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container-fluid">
+                <img src="../Images/Binary_Beats_logo.png" alt="Binary_Beats_logo" class="main-logo">
+                <a class="navbar-brand" href="#">Binary Beats</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../store-home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./library.html">Library</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <div class="ms-2">
+                        <button class="btn btn-outline-success" type="button" onclick="document.location='#'">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="ms-2">
+                        <a href="./cart.html" class="btn btn-outline-success">
+                            <i class="bi bi-cart"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div id="grad1">
+            <!-- Hero Section -->
+        <section class="hero-section text-center text-light py-5">
+            <div class="container">
+                <h1>One Stop for DSA Books</h1>
+                <p class="lead">Get all books related to DSA here at our website.</p>
+            </div>
+        </section>
+        <main>
+            <!-- Books Section -->
+            <section id="books" class="mt-5">
+                <div class="container">
+                    <p class="popular-books text-center">Library - All Books</p>
+                    <div id="book-list" class="row">
+                        <!-- Book Cards will be dynamically added here -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="./index.html" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                        <img src="../Images/Binary_Beats_complete_logo.png" alt="Binary_Beats_complete_logo" class="footer-logo">
+                    </a>
+                    <h5>Binary Beats Book Store</h5>
+                    <p>Binary Beats is your ultimate destination for all DSA books. From bestsellers to academic resources, we have it all!</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2024 Binary Beats Book Store. All Rights Reserved.</p>
+                    <p>
+                        <a href="#" class="text-light me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-light me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Script for Fetching and Displaying Books -->
+    <script>
+        async function fetchBooks() {
+            try {
+                // Simulated fetch for books; replace with actual API call if needed
+                const response = await fetch('http://localhost:5454/api/book/?page_no=0&paage_size=100'); // Replace with your API endpoint URL
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+
+            const res = await response.json();
+
+            const books = res.content;
+
+            console.log(books);
+
+
+                // Create book cards dynamically
+                const booksHtml = books.map(b => {
+                    const book = b[0]
+                    return `
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="${book.image_URL}" class="card-img-top" alt="${book.title}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${book.title}</h5>
+                                    <p class="card-text">Author: ${book.author}</p>
+                                    <a href="http://localhost:5500/${book.id}/book-details.html" class="btn btn-primary">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+
+                document.getElementById('book-list').innerHTML = booksHtml;
+            } catch (error) {
+                console.error('Error fetching book data:', error);
+            }
+        }
+
+        fetchBooks();
+    </script>
+</body>
+
+</html>

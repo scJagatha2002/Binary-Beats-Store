@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../Images/Binary_Beats_logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../store.css">
+    <title>Contact Us - Binary Beats</title>
+    <style>
+        body {
+          background-color: #121212;
+          color: #ffffff;
+          font-family: 'Roboto', sans-serif;
+      }
+
+      .hero-section {
+          background: linear-gradient(rgba(1, 66, 122, 0.7), rgba(1, 179, 239, 0.7)), url('../Images/contact.png') no-repeat center center/cover;
+          color: white;
+      }
+
+      .contact-section h2 {
+          margin-bottom: 20px;
+      }
+
+      .contact-section .form-label {
+          color: #495057;
+      }
+
+      .contact-section .btn-primary {
+          background-color: #01427a;
+          border: none;
+      }
+
+      .contact-section .btn-primary:hover {
+          background-color: #01b3ef;
+      }
+
+      .map-section iframe {
+          width: 100%;
+          height: 400px;
+      }
+
+      footer a {
+          font-size: 1.5rem;
+          transition: color 0.3s;
+      }
+
+      footer a:hover {
+          color: #01b3ef;
+      }
+
+      .form-label {
+          color: white !important;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Navbar -->
+      <section id="nav">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+          <div class="container-fluid">
+            <img src="../Images/Binary_Beats_logo.png" alt="Binary_Beats_logo" class="main-logo">
+            <a class="navbar-brand" href="#">Binary Beats</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                  <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    DSA
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="./Data Structures/DSA-for-Beginners.html">DSA For Beginners</a></li>
+                    <li><a class="dropdown-item" href="./Data Structures/Data-Structures.html">Data Strustures</a></li>
+                    <li><a class="dropdown-item" href="./Algorithms/Algorithms.html">Algorithms</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./Binary-Beats-Store-main/store-home.html">Store</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <!-- Dropdown Element -->
+                  <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      Pratice
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="#">All DSA Problems</a></li>
+                      <li><a class="dropdown-item" href="#">Practice Prblems Difficulty Wise</a></li>
+                      <li><a class="dropdown-item" href="#">Quiz on DSA</a></li>
+                      <li><a class="dropdown-item" href="#">Curated DSA Lists</a></li>
+                    </ul>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+              <div class="ms-2">
+                <button class="btn btn-outline-success" type="button"  onclick="document.location='./Sign-in.html'">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                  </svg>
+                </button>
+            </div>
+            </div>
+          </div>
+        </nav>
+      </section>
+
+      <section class="hero-section text-center text-light py-5">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p class="lead">We would love to hear from you. Please reach out with any questions, comments, or feedback.</p>
+        </div>
+    </section>
+
+    <section class="contact-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Get in Touch</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Your Email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h2>Contact Information</h2>
+                    <p><i class="bi bi-geo-alt-fill"></i> Dayananda Sagar Institutions, Shavige Malleshwara Hills, 1st Stage, Kumarswamy Layout, Bengaluru, Karnataka, 56789</p>
+                    <p><i class="bi bi-telephone-fill"></i> 9663965724</p>
+                    <p><i class="bi bi-envelope-fill"></i> info@binarybeats.com</p>
+                    <p><i class="bi bi-clock-fill"></i> Monday - Friday: 9:00 AM - 5:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+      <div class="container-fluid p-0">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6120541893077!2d77.5643779149526!3d12.909346525399526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae167b7ccf4e4d%3A0x3a32a68b0b6a5c20!2sDayananda%20Sagar%20College%20of%20Engineering%2C%20Shavige%20Malleshwara%20Hills%2C%201st%20Stage%2C%20Kumaraswamy%20Layout%2C%20Bengaluru%2C%20Karnataka%20560078!5e0!3m2!1sen!2sin!4v1623901514481!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </section>
+    
+    <footer class="bg-dark text-light py-4">
+        <div class="container text-center">
+            <a href="#" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                <img src="../Images/Binary_Beats_complete_logo.png" alt="Binary_Beats_complete_logo" class="footer-logo mx-auto d-block">
+            </a>
+            <p>&copy; 2024 Binary Beats. All Rights Reserved.</p>
+            <p>
+                <a href="#" class="text-light me-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-light me-2"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
