@@ -5,8 +5,16 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+header {
+    background-color: #343a40;
+    color: #ffffff;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
 .main-logo {
     height: 40px;
+    margin-right: 10px;
 }
 
 .btn-primary {
@@ -25,6 +33,13 @@ body {
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); /* Primary button shadow on focus */
 }
 
+#cart-count {
+    font-size: 0.75rem;
+    line-height: 1;
+    padding: 0.25em 0.5em;
+    color: white;
+}
+
 /* Navbar Styling */
 .navbar .btn-outline-success {
     border-color: #01b3ef;
@@ -38,10 +53,11 @@ body {
     border-color: #01b3ef;
 }
 
-/* Cart button style */
-.navbar .btn-outline-light {
-    border-color: #01b3ef;
-    color: #01b3ef;
+.navbar .btn-outline-success:active,
+.navbar .btn-outline-light:active {
+    background-color: #01b3ef;
+    color: white;
+    border-color: #01b3ef;  
 }
 
 .form-control[type="search"] + .btn-outline-success {
@@ -64,7 +80,7 @@ body {
 /* Gradient Background */
 #grad1 {
     height: 100%;
-    background-image: linear-gradient(#014274, #01b3ef, #000000);
+    background-image: linear-gradient(#014274, #01b3ef, #014274);
 }
 
 /* Carousel Styling */
@@ -86,14 +102,28 @@ body {
     padding: 50px 0;
 }
 
+#most-popular-books {
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+
+#books-card {
+    height: 700px !important;
+    border: 1px solid #fff;
+}
+
+#card-title {
+    height: 35px;
+}
+
 .card {
-    border: 1px solid #ddd; /* Card border */
     border-radius: 10px; /* Card border radius */
     transition: all 0.3s ease-in-out; /* Smooth transition */
+    width: 350px;
 }
 
 .card:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Card shadow on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Card shadow on hover */
 }
 
 .card-img-top {
@@ -101,7 +131,7 @@ body {
     border-top-right-radius: 10px; /* Rounded corners for top right of the image */
     width: 400px;
     height: 450px;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .card-body {
@@ -120,6 +150,14 @@ body {
     margin-bottom: 15px;
 }
 
+.card-link {
+    text-decoration: none;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+}
+
 .popular-books {
     font-size: 32px;
     font-weight: 500;
@@ -128,9 +166,9 @@ body {
     text-align: center;
 }
 
-.my-5 {
-    margin-top: 3rem !important;
-    margin-bottom: 0rem !important;
+#footer-body {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 /* Footer Styling */
@@ -139,9 +177,7 @@ body {
     --bs-gutter-y: 0;
     display: flex;
     flex-wrap: wrap;
-    margin-top: calc(-1* var(--bs-gutter-y));
-    margin-right: 10px;
-    margin-left: 10px;
+    margin: 0;
 }
 
 .footer-logo {
@@ -150,32 +186,36 @@ body {
 
 .dark-background {
     background-color: #212529;
+}
+
+#footer {
+    background-color: #343a40;
+    color: #fff;
+    margin: 0;
+}
+
+.text-body-secondary, .text-body-secondary a {
+    --bs-text-opacity: 1;
     color: white !important;
 }
 
-.text-body-secondary {
+.link-body-emphasis {
     color: #fff !important;
 }
 
-footer {
-    background-color: #343a40;
-    color: #ffffff;
-    padding: 1rem 0;
-}
-
 footer h5 {
-    font-size: 1.25rem;
-    font-weight: 700;
+    color: #fff;
 }
 
-footer p {
-    margin: 0.5rem 0;
+footer ul li a {
+    color: #fff !important;
 }
 
-footer .text-md-end {
-    text-align: right;
+.text-body-secondary {
+    --bs-text-opacity: 1;
+    color: white !important; /* Override to white */
 }
 
-footer .text-md-end p {
-    margin: 0;
+#footer .text-body-secondary {
+    color: white !important; /* Ensure white text */
 }

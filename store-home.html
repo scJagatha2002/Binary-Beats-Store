@@ -14,6 +14,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
+    <style>
+        #footer .text-body-secondary {
+            color: white !important; /* Ensure white text */
+        }
+    </style>
 </head>
 
 <body>
@@ -23,7 +28,7 @@
             <nav class="navbar navbar-expand-md navbar-dark bg-dark">
                 <div class="container-fluid">
                     <img src="./Images/Binary_Beats_logo.png" alt="Binary_Beats_logo" class="main-logo">
-                    <a class="navbar-brand" href="#">Binary Beats</a>
+                    <a class="navbar-brand" href="../index.html">Binary Beats</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -51,8 +56,9 @@
                             </button>
                         </div>
                         <div class="ms-2">
-                            <a href="./Public/cart.html" class="btn btn-outline-success">
+                            <a href="./Public/cart.html" class="btn btn-outline-success position-relative">
                                 <i class="bi bi-cart"></i>
+                                <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
                             </a>
                         </div>
 
@@ -81,7 +87,7 @@
                             <div class="carousel-caption text-start">
                                 <h1>Exciting Offers</h1>
                                 <p>Limited Time Offer! Grab Your Favorites Now!</p>
-                                <p><a class="btn btn-lg btn-primary" href="#">Shop Now</a></p>
+                                <p><a class="btn btn-lg btn-primary" href="./Public/library.html">Shop Now</a></p>
                             </div>
                         </div>
                     </div>
@@ -91,7 +97,7 @@
                             <div class="carousel-caption">
                                 <h1>Bestseller DSA Books</h1>
                                 <p>Buy bestseller DSA books from us now!</p>
-                                <p><a class="btn btn-lg btn-primary" href="#">Explore Now</a></p>
+                                <p><a class="btn btn-lg btn-primary" href="#most-popular-books">Explore Now</a></p>
                             </div>
                         </div>
                     </div>
@@ -119,7 +125,7 @@
             <!-- Books Section -->
             <section id="books" class="mt-5">
                 <div class="container">
-                    <p class="popular-books text-center">MOST POPULAR DSA BOOKS</p>
+                    <p class="popular-books text-center" id="most-popular-books">MOST POPULAR DSA BOOKS</p>
                     <div id="top-books" class="row justify-content-center">
 
                     </div>
@@ -128,27 +134,60 @@
         </main>
     </div>
 
-    <!--Footer-->
-    <footer class="bg-dark text-light">
-        <div class="container py-4">
-            <div class="row">
-                <div class="col-md-6">
-                    
-                    <h5>Binary Beats Book Store</h5>
-                    <p>Binary Beats is your ultimate destination for all DSA books. From bestsellers to academic
-                        resources, we have it all!</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <p>&copy; 2024 Binary Beats Book Store. All Rights Reserved.</p>
-                    <p>
-                        <a href="#" class="text-light me-2"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-light me-2"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
-                    </p>
-                </div>
-            </div>
+    <!-- Footer -->
+<section id="footer">
+    <div class="dark-background">
+      <footer class="row-footer row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 border-top" id="footer-body">
+        <div class="col mb-3">
+          <a href="../index.html" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+            <img src="./images/Binary_Beats_complete_logo.png" alt="Binary_Beats_complete_logo" class="footer-logo">
+          </a>
+          <p class="text-body-secondary">© 2024</p>
         </div>
-    </footer>
+  
+        <div class="col mb-3"></div>
+  
+        <div class="col mb-3">
+          <h5 class="text-body-secondary">Data Structures</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="../Data Structures/String.html" class="nav-link p-0 text-body-secondary">Strings</a></li>
+            <li class="nav-item mb-2"><a href="../Data Structures/Array.html" class="nav-link p-0 text-body-secondary">Arrays</a></li>
+            <li class="nav-item mb-2"><a href="../Data Structures/Stack.html" class="nav-link p-0 text-body-secondary">Stack</a></li>
+            <li class="nav-item mb-2"><a href="../Data Structures/Queue.html" class="nav-link p-0 text-body-secondary">Queue</a></li>
+            <li class="nav-item mb-2"><a href="../Data Structures/Tree.html" class="nav-link p-0 text-body-secondary">Linked List</a></li>
+            <li class="nav-item mb-2"><a href="../Data Structures/Linked-List.html" class="nav-link p-0 text-body-secondary">Tree</a></li>
+            <li class="nav-item mb-2"><a href="../Data Structures/Graph.html" class="nav-link p-0 text-body-secondary">Graph</a></li>
+            <li class="nav-item mb-2"><a href="../Data Structures/Heap.html" class="nav-link p-0 text-body-secondary">Heap</a></li>
+          </ul>
+        </div>
+  
+        <div class="col mb-3">
+          <h5 class="text-body-secondary">Algorithms</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="../Algorithms/Searching-Algorithms.html" class="nav-link p-0 text-body-secondary">Searching Algorithms</a></li>
+            <li class="nav-item mb-2"><a href="../Algorithms/Sorting-Algorithms.html" class="nav-link p-0 text-body-secondary">Sorting Algorithms</a></li>
+            <li class="nav-item mb-2"><a href="../Algorithms/Greedy-Algorithms.html" class="nav-link p-0 text-body-secondary">Greedy Algorithms</a></li>
+            <li class="nav-item mb-2"><a href="../Algorithms/Dynamic-Programming.html" class="nav-link p-0 text-body-secondary">Dynamic Programming</a></li>
+            <li class="nav-item mb-2"><a href="../Algorithms/Graph-Algorithms.html" class="nav-link p-0 text-body-secondary">Graph Algorithms</a></li>
+            <li class="nav-item mb-2"><a href="../Algorithms/Recursion.html" class="nav-link p-0 text-body-secondary">Recursion</a></li>
+            <li class="nav-item mb-2"><a href="../Algorithms/Backtracking.html" class="nav-link p-0 text-body-secondary">Backtracking</a></li>
+            <li class="nav-item mb-2"><a href="../Algorithms/Divide-and-Conquer.html" class="nav-link p-0 text-body-secondary">Divide and Conquer</a></li>
+            <li class="nav-item mb-2"><a href="../Algorithms/Branch-and-Bound.html" class="nav-link p-0 text-body-secondary">Branch and Bound</a></li>
+          </ul>
+        </div>
+  
+        <div class="col mb-3">
+          <h5 class="text-body-secondary">Store</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="./store-home.html" class="nav-link p-0 text-body-secondary">Store</a></li>
+            <li class="nav-item mb-2"><a href="./Public/contact.html" class="nav-link p-0 text-body-secondary">Contact</a></li>
+            <li class="nav-item mb-2"><a href="./Public/about.html" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </section>
+  
 
     <!-- Include Popper.js and Bootstrap.js -->
     <!-- Remove integrity attribute for Popper.js -->
@@ -194,10 +233,10 @@
                         console.log(book);
                         return `
                         <div class="col-md-4 mb-4">
-                            <div class="card bg-dark text-light">
+                            <div class="card bg-dark text-light" id="books-card">
                                 <img src="${book[0].image_URL}" class="card-img-top" alt="${book[0].title}">
                                 <div class="card-body">
-                                    <h5 class="card-title">${book[0].title}</h5>
+                                    <h5 class="card-title" id="card-title">${book[0].title}</h5>
                                 </div>
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item bg-dark text-light">${book[0].author}</li>
@@ -207,7 +246,7 @@
                                     </li>
                                 </ul>
                                 <div class="card-body">
-                                    <a href="http://localhost:5500/${book[0].id}/book-details.html" class="card-link text-light">View details</a>
+                                    <a href="http://localhost:5500/${book[0].id}/book-details.html" class="card-link text-light">View details></a>
                                     <a href="#" class="btn btn-primary" onclick="addToCart(${book[0].id}, 30, ${book[0].discountedPrice})">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
                                             <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z" />
@@ -235,7 +274,7 @@
                 const userResponse = await fetch(`http://localhost:5454/api/users/profile`, {
                     method: 'GET',
                     headers: {
-                        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MTkxMzgwMzQsImV4cCI6MzQzODI3Njk2OCwiZW1haWwiOiJzY2phZ2F0aGFjaGlkYW1AZ21haWwuY29tIn0.N_fXtllFsonj3Kb5EjoQCcNHO7kkB-5Sxw8i6-pjE2w',
+                        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MTkxMjcwMTAsImV4cCI6MzQzODI1NDkyMCwiZW1haWwiOiJ2aWJoYUBnbWFpbC5jb20ifQ._rtuoy847zdR8Mo8krwEgouTCPSVtv3Fc01TftOmd6U',
                         'Content-Type': 'application/json'
                     }
 
@@ -278,6 +317,28 @@
         }
 
         fetchBooks();
+
+        document.addEventListener('DOMContentLoaded', function () {
+    let cartCount = 0;
+
+    // Function to update cart count
+    function updateCartCount() {
+        const cartCountElement = document.getElementById('cart-count');
+        cartCountElement.textContent = cartCount;
+    }
+
+    // Add event listener to "Add to Cart" buttons
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            cartCount++;
+            updateCartCount();
+        });
+    });
+
+    // Initialize cart count
+    updateCartCount();
+});
     </script>
 </body>
 
