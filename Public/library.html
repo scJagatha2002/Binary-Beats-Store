@@ -28,7 +28,6 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f0f0f0;
         }
 
         header {
@@ -44,8 +43,7 @@
         }
 
         .navbar-brand {
-            font-weight: bold;
-            font-size: 1.5rem;
+            font-size: 1.25rem;
         }
 
         .hero-section {
@@ -88,6 +86,7 @@
         .card-title {
             font-size: 1.5rem;
             font-weight: bold;
+            height: 55px;
         }
 
         .card-body {
@@ -95,22 +94,19 @@
         }
 
         .card-img-top {
-            max-height: 200px; /* Adjust image height as needed */
-            object-fit: cover;
+            max-height: 450px; /* Adjust image height as needed */
+            object-fit: fill;
+        }
+
+        .card-text {
+            color: #fff;
         }
 
         .btn-primary {
-            background-color: #6c757d;
-            border-color: #6c757d;
-        }
-
-        .btn-primary:hover {
-            background-color: #5a6268;
-            border-color: #545b62;
+            margin-left: 30%;
         }
 
         footer {
-            background-color: #343a40;
             color: #ffffff;
             padding-top: 20px;
             padding-bottom: 20px;
@@ -124,6 +120,12 @@
         .link-body-emphasis {
             color: #ffffff;
         }
+
+        #library-all-books {
+            font-size: 40px;
+            margin-bottom: 50px;
+            font-weight: normal;
+        }
     </style>
 </head>
 
@@ -133,7 +135,7 @@
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <div class="container-fluid">
                 <img src="../Images/Binary_Beats_logo.png" alt="Binary_Beats_logo" class="main-logo">
-                <a class="navbar-brand" href="#">Binary Beats</a>
+                <a class="navbar-brand" href="../../index.html">Binary Beats</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -158,8 +160,9 @@
                         </button>
                     </div>
                     <div class="ms-2">
-                        <a href="./cart.html" class="btn btn-outline-success">
+                        <a href="./cart.html" class="btn btn-outline-success position-relative">
                             <i class="bi bi-cart"></i>
+                            <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
                         </a>
                     </div>
                 </div>
@@ -180,7 +183,7 @@
             <!-- Books Section -->
             <section id="books" class="mt-5">
                 <div class="container">
-                    <p class="popular-books text-center">Library - All Books</p>
+                    <p class="popular-books text-center" id="library-all-books">Library - All Books</p>
                     <div id="book-list" class="row">
                         <!-- Book Cards will be dynamically added here -->
                     </div>
@@ -190,27 +193,58 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-light">
-        <div class="container py-4">
-            <div class="row">
-                <div class="col-md-6">
-                    <a href="./index.html" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-                        <img src="../Images/Binary_Beats_complete_logo.png" alt="Binary_Beats_complete_logo" class="footer-logo">
-                    </a>
-                    <h5>Binary Beats Book Store</h5>
-                    <p>Binary Beats is your ultimate destination for all DSA books. From bestsellers to academic resources, we have it all!</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <p>&copy; 2024 Binary Beats Book Store. All Rights Reserved.</p>
-                    <p>
-                        <a href="#" class="text-light me-2"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-light me-2"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
-                    </p>
-                </div>
-            </div>
+<section id="footer">
+    <div class="dark-background">
+      <footer class="row-footer row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 border-top" id="footer-body">
+        <div class="col mb-3">
+          <a href="../../index.html" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+            <img src="../Images/Binary_Beats_complete_logo.png" alt="Binary_Beats_complete_logo" class="footer-logo">
+          </a>
+          <p class="text-body-secondary">© 2024</p>
         </div>
-    </footer>
+  
+        <div class="col mb-3"></div>
+  
+        <div class="col mb-3">
+          <h5 class="text-body-secondary">Data Structures</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="../../Data Structures/String.html" class="nav-link p-0 text-body-secondary">Strings</a></li>
+            <li class="nav-item mb-2"><a href="../../Data Structures/Array.html" class="nav-link p-0 text-body-secondary">Arrays</a></li>
+            <li class="nav-item mb-2"><a href="../../Data Structures/Stack.html" class="nav-link p-0 text-body-secondary">Stack</a></li>
+            <li class="nav-item mb-2"><a href="../../Data Structures/Queue.html" class="nav-link p-0 text-body-secondary">Queue</a></li>
+            <li class="nav-item mb-2"><a href="../../Data Structures/Tree.html" class="nav-link p-0 text-body-secondary">Linked List</a></li>
+            <li class="nav-item mb-2"><a href="../../Data Structures/Linked-List.html" class="nav-link p-0 text-body-secondary">Tree</a></li>
+            <li class="nav-item mb-2"><a href="../../Data Structures/Graph.html" class="nav-link p-0 text-body-secondary">Graph</a></li>
+            <li class="nav-item mb-2"><a href="../../Data Structures/Heap.html" class="nav-link p-0 text-body-secondary">Heap</a></li>
+          </ul>
+        </div>
+  
+        <div class="col mb-3">
+          <h5 class="text-body-secondary">Algorithms</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="../../Algorithms/Searching-Algorithms.html" class="nav-link p-0 text-body-secondary">Searching Algorithms</a></li>
+            <li class="nav-item mb-2"><a href="../../Algorithms/Sorting-Algorithms.html" class="nav-link p-0 text-body-secondary">Sorting Algorithms</a></li>
+            <li class="nav-item mb-2"><a href="../../Algorithms/Greedy-Algorithms.html" class="nav-link p-0 text-body-secondary">Greedy Algorithms</a></li>
+            <li class="nav-item mb-2"><a href="../../Algorithms/Dynamic-Programming.html" class="nav-link p-0 text-body-secondary">Dynamic Programming</a></li>
+            <li class="nav-item mb-2"><a href="../../Algorithms/Graph-Algorithms.html" class="nav-link p-0 text-body-secondary">Graph Algorithms</a></li>
+            <li class="nav-item mb-2"><a href="../../Algorithms/Recursion.html" class="nav-link p-0 text-body-secondary">Recursion</a></li>
+            <li class="nav-item mb-2"><a href="../../Algorithms/Backtracking.html" class="nav-link p-0 text-body-secondary">Backtracking</a></li>
+            <li class="nav-item mb-2"><a href="../../Algorithms/Divide-and-Conquer.html" class="nav-link p-0 text-body-secondary">Divide and Conquer</a></li>
+            <li class="nav-item mb-2"><a href="../../Algorithms/Branch-and-Bound.html" class="nav-link p-0 text-body-secondary">Branch and Bound</a></li>
+          </ul>
+        </div>
+  
+        <div class="col mb-3">
+          <h5 class="text-body-secondary">Store</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="../store-home.html" class="nav-link p-0 text-body-secondary">Store</a></li>
+            <li class="nav-item mb-2"><a href="./contact.html" class="nav-link p-0 text-body-secondary">Contact</a></li>
+            <li class="nav-item mb-2"><a href="./about.html" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </section>
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
